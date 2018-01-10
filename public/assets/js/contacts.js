@@ -34,22 +34,56 @@ function submitForm(e, formName) {
     var message = $(formName + ' .js-field-message').val();
 
     var formData = {
-        name: name,
-        email: email,
-        message: message
+        from_name: name,
+        from_email: email,
+        from_message: message
     };
 
-    $.ajax({
-        type: "POST",
-        url: 'mail.php',
-        data: formData,
-        success: function () {
-            console.log('success');
-            //...
-        },
-        error: function () {
-            console.log('error');
-            //...
-        }
-    });
+    disableSendButton();
+    emailjs.send("gmail", "simple_template", formData).then(
+      function(response) {
+        console.log('success');
+        enableSendButton();
+        clearForm();
+        alert("Thanks. Your message has been sent successfully!");
+      },
+      function(error) {
+        console.log('error', error);
+        enableSendButton();
+        alert("Could not send message at this time. Please try again.");
+      }
+    );
+
+    // $.ajax({
+    //     type: "POST",
+    //     url: 'mail.php',
+    //     data: formData,
+    //     success: function () {
+    //         console.log('success');
+    //         $(formName + ' .js-field-name').val("");
+    //         $(formName + ' .js-field-email').val("");
+    //         $(formName + ' .js-field-message').val("");
+    //         alert("Thanks. Your message has been sent successfully!");
+    //     },
+    //     error: function () {
+    //         console.log('error');
+    //         alert("Could not send message at this time. Please try again.");
+    //     }
+    // });
+}
+
+function disableSendButton() {
+  document.getElementById("contact-send-btn").innerHTML = '<i class="fa fa-spinner fa-spin"></i>Sending';
+  document.getElementById("contact-send-btn").disabled = true;
+}
+
+function enableSendButton() {
+  document.getElementById("contact-send-btn").innerHTML = 'Send';
+  document.getElementById("contact-send-btn").disabled = false;
+}
+
+function clearForm() {
+  $(formName + ' .js-field-name').val("");
+  $(formName + ' .js-field-email').val("");
+  $(formName + ' .js-field-message').val("");
 }

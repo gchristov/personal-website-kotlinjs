@@ -1,0 +1,13 @@
+@import url(../css/monochrome.css);
+
+.project-card .project-card__img img {
+  object-fit: contain;
+}
+
+.background {
+  padding-bottom: 10px;
+}
+
+.fa-spinner {
+    margin-right: 10px;
+}
