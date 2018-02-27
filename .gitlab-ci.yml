@@ -3,7 +3,8 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-    - echo 'Nothing to do...'
+    - mkdir public
+    - mv website/* public
   artifacts:
     paths:
       - public
