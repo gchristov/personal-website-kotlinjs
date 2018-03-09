@@ -11,3 +11,20 @@
 .fa-spinner {
     margin-right: 10px;
 }
+
+.hire_btn {
+	margin-right: 10px;
+}
+
+.download_btn {
+	background-color: #ffffff;
+	border-color: #4a4a4a;
+	border-width: 2px;
+	border-style: solid;
+	color: #4a4a4a!important;
+	padding-top: 14px;
+}
+
+.download_btn:hover {
+	color: #fff!important;
+}

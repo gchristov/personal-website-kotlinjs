@@ -26,10 +26,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-     (function(){
-        emailjs.init("user_6y8bLaIugPk7189CKrLwh");
-     })();
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116654601-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116654601-1');
   </script>
 </head>
 <body>
@@ -102,12 +107,8 @@
           <p class="personal-profile__work">app developer, entrepreneur</p>
           <div class="personal-profile__contacts">
             <dl class="contact-list contact-list__opacity-titles">
-              <!-- <dt>Age:</dt>
-              <dd>28</dd> -->
-              <!-- <dt>Phone:</dt>
-              <dd><a href="tel:82344563333">8 (234) 456-33-33</a></dd> -->
               <dt>Email:</dt>
-              <dd><a href="mailto:ga.christov@gmail.com">ga.christov@gmail.com</a></dd>
+              <dd><a id="contact_header">&nbsp;</a></dd>
               <dt>City:</dt>
               <dd>London, United Kingdom</dd>
             </dl>
@@ -116,7 +117,6 @@
             <a href="https://github.com/8masterofpuppets8" target="_blank"><i class="fa fa-github"></i></a>
             <a href="https://gitlab.com/8masterofpuppets8" target="_blank"><i class="fa fa-gitlab"></i></a>
             <a href="https://www.linkedin.com/in/georgi-christov-b1568762/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-            <a href="https://www.facebook.com/gogo.christov" target="_blank"><i class="fa fa-facebook-square"></i></a>
           </p>
         </div>
       </div>
@@ -135,7 +135,8 @@
           current best practices in App development. Fast learner, hard worker and team player who is proficient in
           both Android and iOS platforms with working industry knowledge.
         </p>
-        <a href="assets/docs/Georgi_Christov_CV.pdf" class="section_btn site-btn" target="_blank"><img src="assets/img/img_btn_icon.png" alt="">Download CV</a>
+        <a href="#contact" class="section_btn site-btn hire_btn">Hire Me</a>
+        <a href="assets/docs/Georgi_Christov_CV.pdf" class="section_btn site-btn download_btn" target="_blank"><!-- <img src="assets/img/img_btn_icon.png" alt=""> -->Download CV</a>
       </div>
     </div>
   </section>
@@ -594,7 +595,7 @@
 
 <!--Testimonials-->
   <div id="testimonials" class="section">
-    <div class="background slider-carousel" style="background-image: url(assets/img/img_bg_main.jpg);">
+    <div class="background slider-carousel" style="background-image: url(assets/img/testimonials-bg.jpg);">
       <div class="container">
         <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -756,7 +757,7 @@
 <!--Blog-->
 
 <!--Contact-->
-  <div class="background" style="background-image: url(assets/img/img_bg_main.jpg)">
+  <div class="background" style="background-image: url(assets/img/contact-bg.jpg)">
     <div id="contact" class="container section">
       <div class="row">
         <div class="col-md-12">
@@ -770,14 +771,13 @@
               <!-- <dt>Phone:</dt>
               <dd><a href="tel:82344563333">8 (234) 456-33-33</a></dd> -->
               <dt>Skype:</dt>
-              <dd><a href="skype:stevefransis">stevefransis</a></dd>
+              <dd><a id="contact_skype">&nbsp;</a></dd>
               <dt>Email:</dt>
-              <dd><a href="mailto:ga.christov@gmail.com">ga.christov@gmail.com</a></dd>
+              <dd><a id="contact_footer">&nbsp;</a></dd>
             </dl>
           </div>
           <div class="contacts__social">
             <ul>
-              <li><a href="https://www.facebook.com/gogo.christov" target="_blank">Facebook</a></li>
               <li><a href="https://www.linkedin.com/in/georgi-christov-b1568762/" target="_blank">Linkedin</a></li>
               <li><a href="https://github.com/8masterofpuppets8" target="_blank">GitHub</a></li>
               <li><a href="https://gitlab.com/8masterofpuppets8" target="_blank">GitLab</a></li>
