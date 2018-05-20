@@ -2,10 +2,6 @@
 
 // Email injection
 
-if (window.attachEvent) {window.attachEvent('onload', injectEmail);}
-else if (window.addEventListener) {window.addEventListener('load', injectEmail, false);}
-else {document.addEventListener('load', injectEmail, false);}
-
 function injectEmail() {
     var email = 'gmail.com'
     email = "ga.christov" + "@" + email
