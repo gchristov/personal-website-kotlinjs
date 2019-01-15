@@ -1,4 +1,16 @@
-License
+# HTTPS
+
+Obtain a free SSL certificate from [here](sslforfree.com). To create the .jks file required for HTTPS, run the following commands:
+
+`openssl pkcs12 -export -out georgi.pkcs12 -inkey private.key -in certificate.crt -certfile ca_bundle.crt`
+
+and then
+
+`openssl pkcs12 -in georgi.pkcs12 -out cert_key.pem -nodes`
+
+Copy the resulting `PEM` file + private key to the page settings in GitLab.
+
+# License
 
 Copyright 2018 Georgi Christov
 
