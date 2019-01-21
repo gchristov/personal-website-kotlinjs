@@ -1,6 +1,6 @@
 {
-	"page_title" : "Georgi Christov, App Developer and Entrepreneur, London",
-	
+	"page_title" : "Georgi Christov, Lead Mobile App Developer and Contractor, London",
+
 	"nav_hello" : "Hello",
 	"nav_resume" : "Resume",
 	"nav_portfolio" : "Portfolio",
@@ -9,15 +9,15 @@
 	"nav_contact" : "Contact",
 
 	"header_name" : "Georgi Christov_",
-	"header_work" : "app developer, entrepreneur",
+	"header_work" : "app developer, contractor",
 	"header_email" : "Email:",
 	"header_city" : "City:",
 	"header_city_value" : "London, United Kingdom",
 
 	"hello_title" : "Hi_",
-	"hello_summary" : "I am a Lead Mobile App developer able to build a complete mobile solution from the ground up - from concept, layout and programming to design and UX. Skilled at writing well-designed, testable and efficient code using current best practices in App development. Fast learner, hard worker and team player who is proficient in both Android and iOS platforms with working industry knowledge.",
+	"hello_summary" : "I am a Lead Mobile App Developer able to build a complete mobile solution from the ground up - from concept, layout and programming to design and UX. Skilled at writing well-designed, testable and efficient code using current best practices in App development. Fast learner, hard worker and team player who is proficient in both Android and iOS platforms with working industry knowledge.",
 	"hello_hire" : "Hire Me",
-	"hello_download" : "Download CV",
+	"hello_download" : "View CV",
 
 	"resume_title" : "Resume_",
 	"resume_summary" : "I am a Lead Mobile Developer at Field Margin Ltd. I love making apps for mobile devices and my passion is working with the <b>Android</b> and <b>iOS</b> mobile platforms. I have worked on various different projects in the past few years and the largest one so far is GraffiTab Ltd., where I am the founder, mobile developer and participate in architecting the server-side as well as the marketing website.",
@@ -32,10 +32,10 @@
 	"resume_employment_fieldmargin_title" : "Field Margin Ltd.",
 	"resume_employment_fieldmargin_date" : "2017 - Present",
 	"resume_employment_fieldmargin_position" : "Lead Mobile Developer",
-	"resume_employment_fieldmargin_summary" : "&nbsp;&nbsp;• Lead Android Developer, responsible for the initial redesign of the fieldmargin app as well as maintaining top user experience on both iOS and Android platforms.<br />&nbsp;&nbsp;• Managing the Android team.<br />&nbsp;&nbsp;• Involved in the product decision making process as well as advising on best industry practices for producing clean, testable and reusable solutions.",
+	"resume_employment_fieldmargin_summary" : "&nbsp;&nbsp;• Lead Android developer, responsible for the initial redesign of the fieldmargin app as well as maintaining top user experience on both iOS and Android platforms.<br />&nbsp;&nbsp;• Managing the Android team.<br />&nbsp;&nbsp;• Involved in the product decision making process as well as advising on best industry practices for producing clean, testable and reusable solutions.",
 	"resume_employment_qumu_title" : "Qumu Corporation",
-	"resume_employment_qumu_position" : "Mobile Developer",
-	"resume_employment_qumu_summary" : "&nbsp;&nbsp;• Lead mobile engineer on implementing the first iOS and Android apps for the platform.<br />&nbsp;&nbsp;• Mobile design consultant for the new version of the Qumu platform. Worked closely with our team in Hyderabad on re-implementing both apps.<br />&nbsp;&nbsp;• Involved in the overall product design.",
+	"resume_employment_qumu_position" : "Lead Mobile Developer",
+	"resume_employment_qumu_summary" : "&nbsp;&nbsp;• Lead mobile developer on implementing the first iOS and Android apps for the platform.<br />&nbsp;&nbsp;• Mobile design consultant for the new version of the Qumu platform. Worked closely with our team in Hyderabad on re-implementing both apps.<br />&nbsp;&nbsp;• Involved in the overall product design.",
 	"resume_employment_futurist_title" : "Futurist Labs (Start-up company)",
 	"resume_employment_futurist_position" : "Contractor and Mobile Consultant",
 	"resume_employment_futurist_summary" : "&nbsp;&nbsp;• Lead mobile developer for the initial apps for the Futurist Labs start-up. Worked on various projects, ranging from social (Tabex, GetLokal), medical (LarcTest), personal (Phyre, getti), music (Mansions on the Moon) and games (Mentalist).<br />&nbsp;&nbsp;• Taken part in establishing company structure, GitHub and Bitbucket repositories and project tracking and communication systems (Trello, Slack, Jira).<br />&nbsp;&nbsp;• Taken part in establishing stable long-term client relations.",
@@ -103,7 +103,7 @@
 
 	"contact_title" : "Get in touch_",
 	"contact_letter" : "Or just write me a letter here_",
-	"contact_copyright" : "© 2018 Georgi Christov. All Rights Reserved",
+	"contact_copyright" : "© 2020 Georgi Christov. All Rights Reserved",
 	"contact_send" : "Send",
 	"contact_name" : "Your name",
 	"contact_email" : "Your e-mail",
