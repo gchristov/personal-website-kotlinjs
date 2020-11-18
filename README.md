@@ -1,3 +1,10 @@
+# Local Development
+
+```
+cd website
+python -m SimpleHTTPServer 8080 
+```
+
 # HTTPS
 
 Obtain a free SSL certificate from [here](sslforfree.com). To create the .jks file required for HTTPS, run the following commands:

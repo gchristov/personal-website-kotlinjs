@@ -5,6 +5,7 @@ else if (window.addEventListener) {window.addEventListener('load', performWindow
 else {document.addEventListener('load', performWindowLoadOperations, false);}
 
 function performWindowLoadOperations() {
-    // loadLanguage("gb", "English");
     injectEmail();
+    injectPortfolio();
+    loadLanguage("gb", "English");
 }

@@ -10,7 +10,7 @@ function injectEmail() {
   document.getElementById("contact_header").text = email;
   document.getElementById("contact_footer").href = mailTo;
   document.getElementById("contact_footer").text = email;
-  injectSkype();
+  // injectSkype();
   injectEmailJS();
 }
 
