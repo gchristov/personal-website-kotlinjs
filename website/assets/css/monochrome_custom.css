@@ -39,8 +39,9 @@
     border: none;
 }
 .dropbtn img, .dropdown-content a img {
-    margin-right: 8px;
-    margin-top: -3.5px;
+    margin-right: 12px;
+    margin-top: -3px;
+    width: 24px;
 }
 .dropdown-content {
     display: none;
