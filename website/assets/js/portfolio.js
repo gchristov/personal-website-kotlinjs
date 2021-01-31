@@ -3,13 +3,13 @@ function injectPortfolio() {
     {
       "tag":"mobile apps",
       "key":"everlog",
-      "stack":["iOS", "Android", "Firebase"],
+      "stack":["iOS", "Android", "MVP", "Firebase"],
       "url":"everlogapp.com"
     },
     {
       "tag":"platforms",
       "key":"graffitab",
-      "stack":["iOS", "Android", "Spring Boot", "Amazon Web Services"],
+      "stack":["iOS", "Android", "MVP", "Spring Boot", "Amazon Web Services"],
       "url":"graffitab.com"
     },
     {
@@ -21,49 +21,49 @@ function injectPortfolio() {
     {
       "tag":"platforms",
       "key":"fieldmargin",
-      "stack":["iOS", "Android", "ReactJS", "Spring Boot", "Google Cloud Platform"],
+      "stack":["iOS", "Android", "MVP", "ReactJS", "Spring Boot", "Google Cloud Platform"],
       "url":"fieldmargin.com"
     },
     {
       "tag":"platforms",
       "key":"qumu",
-      "stack":["iOS", "Android", "Spring Boot", "Google Cloud Platform"],
+      "stack":["iOS", "Android", "MVP", "Spring Boot", "Google Cloud Platform"],
       "url":"qumu.com"
     },
     {
       "tag":"mobile apps",
       "key":"massalert",
-      "stack":["iOS", "Android", "Google Cloud Platform"],
+      "stack":["iOS", "Android", "MVC", "MVP", "Google Cloud Platform"],
       "url":"futurist-labs.com"
     },
     {
       "tag":"mobile apps",
       "key":"tabex",
-      "stack":["iOS", "Android", "Google Cloud Platform"],
+      "stack":["iOS", "Android", "MVP", "Google Cloud Platform"],
       "url":"tabex.bg"
     },
     {
       "tag":"platforms",
       "key":"mentalist",
-      "stack":["Android", "Google Cloud Platform"],
+      "stack":["Android", "MVP", "Google Cloud Platform"],
       "url":"mentalist.bg"
     },
     {
       "tag":"mobile apps",
       "key":"getti",
-      "stack":["iOS", "Android"],
+      "stack":["iOS", "Android", "MVP"],
       "url":"getti.org"
     },
     {
       "tag":"platforms",
       "key":"larctest",
-      "stack":["iOS", "Android", "Google Cloud Platform"],
+      "stack":["iOS", "Android", "MVP", "Google Cloud Platform"],
       "url":"larctest.com"
     },
     {
       "tag":"mobile apps",
       "key":"tbob",
-      "stack":["iOS", "Android"],
+      "stack":["iOS", "Android", "MVP"],
       "url":"thebestofbulgaria.eu/en/home"
     },
   ];
