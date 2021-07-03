@@ -2,6 +2,12 @@ function injectPortfolio() {
   let projects = [
     {
       "tag":"mobile apps",
+      "key":"monzo",
+      "stack":["iOS", "Android", "MVVM", "Go", "Amazon Web Services"],
+      "url":"monzo.com"
+    },
+    {
+      "tag":"mobile apps",
       "key":"everlog",
       "stack":["iOS", "Android", "MVP", "Firebase"],
       "url":"everlogapp.com"
