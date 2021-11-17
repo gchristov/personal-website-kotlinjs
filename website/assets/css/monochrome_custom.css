@@ -68,30 +68,6 @@
     color: #fff!important;
 }
 
-/* Chat FAB */
-
-.fab {
-  display: block;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: #529aff;
-  border-radius: 30px;
-  width: 60px;
-  height: 60px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.fab-icon {
-    width: 100%;
-    height: 100%;
-    padding: 13px;
-}
-
 /* Contact form */
 .ohnohoney {
     opacity: 0;

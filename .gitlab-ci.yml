@@ -1,39 +1,18 @@
-# image: alpine:latest
 image: node:7.9.0
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - bot/alpha/node_modules/
-
-before_script:
-  # Build React app.
-  - cd website/alpha
-  - npm install
-  - npm run build
-  # Make sure we switch back to root directory.
-  - cd ../..
-
 pages:
   stage: deploy
   script:
     # Cleanup old files.
-    - rm -rf bot
     - rm -rf public
-    # Copy bot files to a temporary folder, so as to not copy all of them later in public.
-    - mkdir bot
-    - mv website/alpha bot
     # Copy website files to root.
     - mkdir public
     - mv website/* public
     - mkdir -p public/.well-known/acme-challenge
     - mv website/.well-known/* public/.well-known
-    # Copy bot files to chat path.
-    - mkdir public/chat
-    - mv bot/alpha/build/* public/chat
   artifacts:
     paths:
       - public
