@@ -11,8 +11,8 @@
 	"header_name" : "Georgi Christov_",
 	"header_work" : "lead iOS and Android engineer",
 	"header_email" : "Email:",
-	"header_city" : "City:",
-	"header_city_value" : "London, United Kingdom",
+	"header_location" : "Area:",
+	"header_location_value" : "Spain",
 
 	"hello_title" : "Hi_",
 	"hello_summary" : "I am a Lead iOS and Android Engineer with a passion for building complete mobile solutions from the ground up - from concept, design and code to user experience (UX) and market. Skilled at writing well designed, testable and efficient code using current best practices in app development. Fast learner, hard worker and team player who is proficient in both Android and iOS platforms with proven industry knowledge.",
@@ -117,7 +117,7 @@
 
 	"contact_title" : "Contact_",
 	"contact_letter" : "or drop me a line here_",
-	"contact_copyright" : "© 2021 Georgi Christov. All Rights Reserved",
+	"contact_copyright" : "© 2022 Georgi Christov. All Rights Reserved",
 	"contact_send" : "Send",
 	"contact_name" : "Your name",
 	"contact_email" : "Your e-mail",
