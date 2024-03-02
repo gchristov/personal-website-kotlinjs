@@ -5,11 +5,11 @@ plugins {
 gradlePlugin {
     plugins.register("base-browser-plugin") {
         id = "base-browser-plugin"
-        implementationClass = "com.gchristov.thecodinglove.gradleplugins.BaseBrowserPlugin"
+        implementationClass = "com.gchristov.personal.gradleplugins.BaseBrowserPlugin"
     }
     plugins.register("browser-binary-plugin") {
         id = "browser-binary-plugin"
-        implementationClass = "com.gchristov.thecodinglove.gradleplugins.BrowserBinaryPlugin"
+        implementationClass = "com.gchristov.personal.gradleplugins.BrowserBinaryPlugin"
     }
 }
 

@@ -1,4 +1,4 @@
-package com.gchristov.thecodinglove.landingpageweb.service
+package com.gchristov.personal.landingpageweb.service
 
 /*
  * This web service needs a source file in order to compile correctly. We use a placeholder since there isn't any

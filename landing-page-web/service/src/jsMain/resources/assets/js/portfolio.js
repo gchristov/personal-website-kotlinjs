@@ -22,7 +22,7 @@ function injectPortfolio() {
       "tag":"slack apps",
       "key":"codinglove",
       "stack":["Slack", "Vertx", "DigitalOcean"],
-      "url":"thecodinglove.gchristov.com"
+      "url":"thecodinglove.crowdstandout.com"
     },
     {
       "tag":"platforms",

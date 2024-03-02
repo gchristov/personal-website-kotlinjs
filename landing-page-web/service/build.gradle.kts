@@ -1,4 +1,4 @@
-import com.gchristov.thecodinglove.gradleplugins.binaryRootDirectory
+import com.gchristov.personal.gradleplugins.binaryRootDirectory
 
 plugins {
     id("browser-binary-plugin")

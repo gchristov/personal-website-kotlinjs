@@ -1,4 +1,4 @@
-package com.gchristov.thecodinglove.gradleplugins
+package com.gchristov.personal.gradleplugins
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
