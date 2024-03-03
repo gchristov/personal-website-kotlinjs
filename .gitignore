@@ -54,3 +54,5 @@ node_modules/
 .env
 .gradle
 .idea
+
+credentials-gcp-infra.json
