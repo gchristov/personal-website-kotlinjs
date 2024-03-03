@@ -1,10 +1,10 @@
-name: proxy-web-service-deploy
+name: landing-page-web-deploy
 
 on:
   push:
     branches: [ master ]
     paths:
-      - 'proxy-web/**'
+      - 'landing-page-web/**'
 
 env:
   JAVA_VERSION: "15"
@@ -12,10 +12,10 @@ env:
   GCP_SA_KEY_INFRA: ${{ secrets.GCP_SA_KEY_INFRA }}
 
 jobs:
-  proxy-web-service-deploy-build:
+  landing-page-web-deploy-build:
     runs-on: ubuntu-20.04
     concurrency:
-      group: ${{ github.ref }}-proxy-web-service-deploy-build
+      group: ${{ github.ref }}-landing-page-web-deploy-build
       cancel-in-progress: true
     steps:
       - name: Checkout
@@ -29,11 +29,11 @@ jobs:
         uses: gradle/actions/setup-gradle@v3 # By default, cache is only saved on the 'master' branch
       - name: Set up secrets
         run: |
-          echo "$GCP_SA_KEY_INFRA" >> ./proxy-web/infra/credentials-gcp-infra.json
+          echo "$GCP_SA_KEY_INFRA" >> ./landing-page-web/infra/credentials-gcp-infra.json
       - name: Build project
         run: |
           set -o pipefail && 
-          cd proxy-web &&
+          cd landing-page-web &&
           ./gradlew --no-daemon assemble &&
           cd ..
       - name: Deploy infrastructure
@@ -41,7 +41,7 @@ jobs:
         with:
           command: up
           stack-name: prod
-          work-dir: proxy-web/infra
+          work-dir: landing-page-web/infra
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
       - name: Artifacts
@@ -51,12 +51,12 @@ jobs:
           name: Build
           path: |
             **/build
-            proxy-web/infra
+            landing-page-web/infra
 
-  proxy-web-service-deploy-test:
+  landing-page-web-deploy-test:
     runs-on: ubuntu-20.04
     concurrency:
-      group: ${{ github.ref }}-proxy-web-service-deploy-test
+      group: ${{ github.ref }}-landing-page-web-deploy-test
       cancel-in-progress: true
     steps:
       - name: Checkout
@@ -70,11 +70,11 @@ jobs:
         uses: gradle/actions/setup-gradle@v3 # By default, cache is only saved on the 'master' branch
       - name: Set up secrets
         run: |
-          echo "$GCP_SA_KEY_INFRA" >> ./proxy-web/infra/credentials-gcp-infra.json
+          echo "$GCP_SA_KEY_INFRA" >> ./landing-page-web/infra/credentials-gcp-infra.json
       - name: Test
         run: |
           set -o pipefail && 
-          cd proxy-web &&
+          cd landing-page-web &&
           ./gradlew --no-daemon --continue jsTest &&
           cd ..
       - name: Generate test report
@@ -82,7 +82,7 @@ jobs:
         if: always() # Ensure all test reports are collected, even after errors
         with:
           report_paths: '**/build/test-results/**/TEST-*.xml'
-          check_name: 'proxy-web-service-test-deploy-results'
+          check_name: 'landing-page-web-deploy-test-results'
       - name: Artifacts
         uses: actions/upload-artifact@v4
         if: always() # Ensure all artifacts are collected, even after errors
