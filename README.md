@@ -1,6 +1,6 @@
 # About
 
-As the name suggests, `personal-website-kotlinjs` is a cutting-edge Kotlin multiplatform project, powering my [personal website](https://gchristov.com). Built with [KotlinJS](https://kotlinlang.org/docs/js-overview.html), it seamlessly bridges Kotlin and Javascript to bring a fully serverless platform, currently deployed as microservice [Docker](https://www.docker.com/) containers on [Google Cloud](https://cloud.google.com/run) using [Pulumi](https://www.pulumi.com/) infrastructure as code.
+A cutting-edge Kotlin multiplatform project, powering [gchristov.com](https://gchristov.com). Built with [KotlinJS](https://kotlinlang.org/docs/js-overview.html), it seamlessly bridges Kotlin and Javascript to bring a fully serverless platform, currently deployed as microservice [Docker](https://www.docker.com/) containers on [Google Cloud](https://cloud.google.com/run) using [Pulumi](https://www.pulumi.com/) infrastructure as code.
 
 <details>
   <summary>🛠 Tech stack</summary>
