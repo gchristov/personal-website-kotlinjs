@@ -1,0 +1,50 @@
+name: personal-website-common
+runtime: yaml
+description: Deploys the common infra APIs
+
+resources:
+
+  ########################################
+  # APIs
+  ########################################
+
+  # Enables Cloud Resource Manager API. Needed for some the resources.
+  cloud-resource-manager-api:
+    type: gcp:projects:Service
+    properties:
+      disableDependentServices: true
+      service: cloudresourcemanager.googleapis.com
+    options:
+      protect: true
+  # Enables the Artifact Registry API. Needed for Docker.
+  artifact-registry-api:
+    type: gcp:projects:Service
+    properties:
+      disableDependentServices: true
+      service: artifactregistry.googleapis.com
+    options:
+      protect: true
+  # Enables the Cloud Run Admin API.
+  cloud-run-admin-api:
+    type: gcp:projects:Service
+    properties:
+      disableDependentServices: true
+      service: run.googleapis.com
+    options:
+      protect: true
+
+  ########################################
+  # Artifact Registry
+  ########################################
+
+  # Manages a Docker image repository.
+  artifact-registry:
+    type: gcp:artifactregistry:Repository
+    properties:
+      format: DOCKER
+      location: europe-west1
+      repositoryId: personal-website
+    options:
+      protect: true
+      dependsOn:
+        - ${artifact-registry-api}
