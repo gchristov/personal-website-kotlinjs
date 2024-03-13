@@ -46,6 +46,7 @@ jobs:
           command: preview
           stack-name: prod
           work-dir: landing-page-web/infra
+          pulumi-version: "3.108.1"
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
       - name: Artifacts
