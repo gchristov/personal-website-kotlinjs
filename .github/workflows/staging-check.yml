@@ -73,7 +73,7 @@ jobs:
           set -o pipefail &&
           bash tools/scripts/secrets.sh
       - name: Build service
-        if: exists("${{ matrix.service }}/gradlew")
+        if: exists('${{ matrix.service }}/gradlew')
         run: |
           # Need to explicitly cd into each service, otherwise we get yarn cache clashes
           set -o pipefail &&
