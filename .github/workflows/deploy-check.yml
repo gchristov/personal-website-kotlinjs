@@ -100,7 +100,7 @@ jobs:
             ${{ matrix.service }}/infra
 
   service-deploy-test:
-    if: needs.detect-changed-services.outputs.changed_services != '' && ${{ matrix.service }} != 'common' # The common service only has infra
+    if: needs.detect-changed-services.outputs.changed_services != ''
     runs-on: ubuntu-24.04
     strategy:
       matrix:
@@ -124,6 +124,7 @@ jobs:
           set -o pipefail && 
           bash tools/scripts/secrets.sh
       - name: Test
+        if: ${{ matrix.service }} != 'common' # The common service only has infra
         run: |
           # Need to explicitly cd into each service, otherwise we get yarn cache clashes
           set -o pipefail && 
