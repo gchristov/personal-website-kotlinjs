@@ -109,11 +109,11 @@ jobs:
             ${{ matrix.service }}/infra
 
   service-check-test:
-    if: needs.detect-changed-services.outputs.changed_services != '' && ${{ matrix.service }} != 'common' # The common service only has infra
     runs-on: ubuntu-24.04
     strategy:
       matrix:
         service: ${{ fromJSON(needs.detect-changed-services.outputs.changed_services) }}
+    if: needs.detect-changed-services.outputs.changed_services != '' && ${{ matrix.service }} != 'common' # The common service only has infra
     concurrency:
       group: ${{ github.ref }}-${{ matrix.service }}-service-check-test
       cancel-in-progress: true
