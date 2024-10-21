@@ -73,7 +73,7 @@ jobs:
           set -o pipefail &&
           bash tools/scripts/secrets.sh
       - name: Build service
-        if: ${{ matrix.service != 'common' }} # The common service only has infra
+        if: ${{ [ -e "${{ matrix.service }}/gradlew" ] }}
         run: |
           # Need to explicitly cd into each service, otherwise we get yarn cache clashes
           set -o pipefail &&
@@ -133,7 +133,7 @@ jobs:
           set -o pipefail && 
           bash tools/scripts/secrets.sh
       - name: Test
-        if: ${{ matrix.service != 'common' }} # The common service only has infra
+        if: ${{ [ -e "${{ matrix.service }}/gradlew" ] }}
         run: |
           # Need to explicitly cd into each service, otherwise we get yarn cache clashes
           set -o pipefail && 
