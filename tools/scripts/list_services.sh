@@ -4,7 +4,7 @@ set -e
 # Should be invoked from the root of the project as all paths are relative.
 
 all_services=($(find . -maxdepth 2 -type d -name infra -exec test -f "{}/Pulumi.yaml" \; -print | awk -F'/' '{print $2}' | xargs -I {} echo {}))
-
+jhqekj][pq]
 if [ ${#all_services[@]} -eq 0 ]; then
   echo "No services detected"
   exit 1
