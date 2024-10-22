@@ -21,7 +21,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.21")
 }
 
-val taskNames = listOf("clean", "assemble")
+val taskNames = listOf("clean", "assemble", "jsTest", "kotlinUpgradeYarnLock")
 taskNames.forEach {  taskName ->
     tasks.register("${taskName}All") {
         tasks.findByName(taskName)?.let { dependsOn(it) }
