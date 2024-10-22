@@ -37,5 +37,3 @@ class BaseBrowserPlugin : BaseMultiplatformPlugin() {
         }
     }
 }
-
-fun Project.binaryRootDirectory(): Directory = layout.buildDirectory.dir("dist/js").get()

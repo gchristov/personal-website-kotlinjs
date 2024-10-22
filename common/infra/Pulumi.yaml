@@ -15,6 +15,7 @@ resources:
       disableDependentServices: true
       service: cloudresourcemanager.googleapis.com
     options:
+      version: 8.6.0
       protect: true
   # Enables the Artifact Registry API. Needed for Docker.
   artifact-registry-api:
@@ -23,6 +24,7 @@ resources:
       disableDependentServices: true
       service: artifactregistry.googleapis.com
     options:
+      version: 8.6.0
       protect: true
   # Enables the Cloud Run Admin API.
   cloud-run-admin-api:
@@ -31,6 +33,7 @@ resources:
       disableDependentServices: true
       service: run.googleapis.com
     options:
+      version: 8.6.0
       protect: true
 
   ########################################
@@ -45,6 +48,7 @@ resources:
       location: europe-west1
       repositoryId: personal-website
     options:
+      version: 8.6.0
       protect: true
       dependsOn:
         - ${artifact-registry-api}
