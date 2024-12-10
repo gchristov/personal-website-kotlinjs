@@ -57,6 +57,7 @@ The order to do this matters, so go with common/infra first, then all other micr
 1. [Install Docker Desktop](https://docs.docker.com/get-started/) and start it up. No additional configuration is required as the project uses Docker Compose to run locally. Checkout the `docker` folder for the setup.
 2. [Install IntelliJ](https://www.jetbrains.com/help/idea/installation-guide.html). This project has been tested with `IntelliJ IDEA 2023.2.5`.
 3. Open the root project with IntelliJ and wait for it to initialise.
+4. Make sure you select the right Java version. If you don't have it installed locally, use latest Azul Zulu on Intellij
 </details>
 
 ## Run locally
