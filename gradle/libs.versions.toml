@@ -1,0 +1,14 @@
+[versions]
+kotlin = "1.9.21"
+
+[libraries]
+
+# Plugin dependencies included in the pre-compiled gradle-plugins/conventions project
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[plugins]
+
+# Plugins defined by this project
+#noinspection UnusedVersionCatalogEntry
+personal-website-base-browser = { id = "base-browser-plugin", version = "unspecified" }
+personal-website-browser-binary = { id = "browser-binary-plugin", version = "unspecified" }

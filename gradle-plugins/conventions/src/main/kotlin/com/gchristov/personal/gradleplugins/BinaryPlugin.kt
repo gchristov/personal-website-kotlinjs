@@ -7,7 +7,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 class BrowserBinaryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         target.run {
-            plugins.apply("base-browser-plugin")
+            plugins.apply(libs.findPlugin("personal-website-base-browser").get().get().pluginId)
             extensions.configure(KotlinMultiplatformExtension::class.java) {
                 js(IR) {
                     binaries.executable()
