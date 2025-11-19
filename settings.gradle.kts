@@ -1,14 +1,9 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 plugins {
     // Allows publishing build scans when common tasks run from the project root, eg jsTest
     id("com.gradle.develocity") version("3.18.1")
 }
-
-rootProject.name = "personal-website-kotlinjs"
-
-// Add or remove projects here from the common build. Alternatively, each project can be opened in isolation.
-includeBuild("gradle-plugins")
-includeBuild("landing-page-web")
-includeBuild("proxy-web")
 
 develocity {
     buildScan {
@@ -17,3 +12,10 @@ develocity {
         publishing.onlyIf { true }
     }
 }
+
+rootProject.name = "personal-website-kotlinjs"
+
+// Add or remove projects here from the common build. Alternatively, each project can be opened in isolation.
+includeBuild("gradle-plugins")
+includeBuild("landing-page-web")
+includeBuild("proxy-web")
