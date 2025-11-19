@@ -1,7 +1,7 @@
 import com.gchristov.personal.gradleplugins.binaryRootDirectory
 
 plugins {
-    id("browser-binary-plugin")
+    alias(libs.plugins.personal.website.browser.binary)
 }
 
 // Bundle resources specific to this binary
