@@ -2,15 +2,15 @@ function injectPortfolio() {
   let projects = [
     {
       "tag":"mobile apps",
-      "key":"monzo",
-      "stack":["iOS", "Android", "MVVM", "Go", "Amazon Web Services"],
-      "url":"monzo.com"
+      "key":"everlog",
+      "stack":["iOS", "Android", "Firebase", "Kotlin Multiplatform"],
+      "url":"everlogapp.com"
     },
     {
-      "tag":"mobile apps",
-      "key":"everlog",
-      "stack":["iOS", "Android", "MVP", "Firebase"],
-      "url":"everlogapp.com"
+      "tag":"slack apps",
+      "key":"codinglove",
+      "stack":["Slack", "Kotlin Multiplatform", "Google Cloud"],
+      "url":"thecodinglove.crowdstandout.com"
     },
     {
       "tag":"platforms",
@@ -18,63 +18,10 @@ function injectPortfolio() {
       "stack":["iOS", "Android", "MVP", "Spring Boot", "Amazon Web Services"],
       "url":"graffitab.com"
     },
-    {
-      "tag":"slack apps",
-      "key":"codinglove",
-      "stack":["Slack", "Vertx", "DigitalOcean"],
-      "url":"thecodinglove.crowdstandout.com"
-    },
-    {
-      "tag":"platforms",
-      "key":"fieldmargin",
-      "stack":["iOS", "Android", "MVP", "ReactJS", "Spring Boot", "Google Cloud Platform"],
-      "url":"fieldmargin.com"
-    },
-    {
-      "tag":"platforms",
-      "key":"qumu",
-      "stack":["iOS", "Android", "MVP", "Spring Boot", "Google Cloud Platform"],
-      "url":"qumu.com"
-    },
-    {
-      "tag":"mobile apps",
-      "key":"massalert",
-      "stack":["iOS", "Android", "MVC", "MVP", "Google Cloud Platform"],
-      "url":"futurist-labs.com"
-    },
-    {
-      "tag":"mobile apps",
-      "key":"tabex",
-      "stack":["iOS", "Android", "MVP", "Google Cloud Platform"],
-      "url":"tabex.bg"
-    },
-    {
-      "tag":"platforms",
-      "key":"mentalist",
-      "stack":["Android", "MVP", "Google Cloud Platform"],
-      "url":"mentalist.bg"
-    },
-    {
-      "tag":"mobile apps",
-      "key":"getti",
-      "stack":["iOS", "Android", "MVP"],
-      "url":"getti.org"
-    },
-    {
-      "tag":"platforms",
-      "key":"larctest",
-      "stack":["iOS", "Android", "MVP", "Google Cloud Platform"],
-      "url":"larctest.com"
-    },
-    {
-      "tag":"mobile apps",
-      "key":"tbob",
-      "stack":["iOS", "Android", "MVP"],
-      "url":"thebestofbulgaria.eu/en/home"
-    },
   ];
   let cardHtmlTemplate = `
-    <div class="row project-card"  data-toggle="modal" data-target="#modal-%KEY" data-portfolio-tag="%TAG">
+<!--    <div class="row project-card"  data-toggle="modal" data-target="#modal-%KEY" data-portfolio-tag="%TAG">-->
+    <div class="row project-card" data-portfolio-tag="%TAG">
       <div class="col-md-6 col-lg-5 project-card__img">
         <img class="" src="assets/img/project_%KEY.png" alt="project-img">
       </div>
