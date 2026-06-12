@@ -1,5 +1,5 @@
 {
-	"page_title" : "Georgi Christov, Lead iOS and Android Engineer",
+	"page_title" : "Georgi Christov | Tech Lead | Senior iOS and Android Engineer",
 
 	"nav_hello" : "Hello",
 	"nav_resume" : "Resume",
@@ -9,7 +9,7 @@
 	"nav_contact" : "Contact",
 
 	"header_name" : "Georgi Christov_",
-	"header_work" : "lead iOS and Android engineer",
+	"header_work" : "Tech Lead | Senior iOS and Android Engineer",
 	"header_email" : "Email:",
 	"header_location" : "Area:",
 	"header_location_value" : "Spain",
@@ -20,7 +20,7 @@
 	"hello_download" : "View CV",
 
 	"resume_title" : "Resume_",
-	"resume_summary" : "I have taken on various projects in the past few years the largest ones so far being Everlog (workout tracker app) and GraffiTab (social network for digital artists), where I am the founder, iOS and Android engineer and server-side architect.",
+	"resume_summary" : "",
 	"resume_employment" : "experience",
 	"resume_employment_monzo_tech_lead_title" : "Monzo <small>Mobile bank</small>",
 	"resume_employment_monzo_tech_lead_date" : "Apr 2026 - PRESENT",
