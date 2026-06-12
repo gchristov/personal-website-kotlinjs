@@ -3,20 +3,20 @@ function injectPortfolio() {
     {
       "tag":"mobile apps",
       "key":"everlog",
-      "stack":["iOS", "Android", "MVP", "Firebase"],
+      "stack":["iOS", "Android", "Firebase", "Kotlin Multiplatform"],
       "url":"everlogapp.com"
+    },
+    {
+      "tag":"slack apps",
+      "key":"codinglove",
+      "stack":["Slack", "Kotlin Multiplatform", "Google Cloud"],
+      "url":"thecodinglove.crowdstandout.com"
     },
     {
       "tag":"platforms",
       "key":"graffitab",
       "stack":["iOS", "Android", "MVP", "Spring Boot", "Amazon Web Services"],
       "url":"graffitab.com"
-    },
-    {
-      "tag":"slack apps",
-      "key":"codinglove",
-      "stack":["Slack", "Vertx", "DigitalOcean"],
-      "url":"thecodinglove.crowdstandout.com"
     },
   ];
   let cardHtmlTemplate = `
