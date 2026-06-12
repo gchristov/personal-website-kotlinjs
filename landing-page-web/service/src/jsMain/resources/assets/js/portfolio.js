@@ -20,7 +20,8 @@ function injectPortfolio() {
     },
   ];
   let cardHtmlTemplate = `
-    <div class="row project-card"  data-toggle="modal" data-target="#modal-%KEY" data-portfolio-tag="%TAG">
+<!--    <div class="row project-card"  data-toggle="modal" data-target="#modal-%KEY" data-portfolio-tag="%TAG">-->
+    <div class="row project-card" data-portfolio-tag="%TAG">
       <div class="col-md-6 col-lg-5 project-card__img">
         <img class="" src="assets/img/project_%KEY.png" alt="project-img">
       </div>
