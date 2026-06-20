@@ -18,6 +18,11 @@ resources:
     properties:
       name: gchristov/personal-website-landing-page-web/prod
 
+  contact-reference:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: gchristov/personal-website-contact/prod
+
   ########################################
   # proxy-web-service
   ########################################
@@ -29,6 +34,7 @@ resources:
       build:
         args:
           LANDING_PAGE_WEB_SERVICE_HOST: ${landing-page-web-reference.outputs["landingPageWebServiceHost"]}
+          CONTACT_SERVICE_HOST: ${contact-reference.outputs["contactServiceHost"]}
         platform: linux/amd64
         context: ../service/build/dist/js
       imageName: ${location}-docker.pkg.dev/${gcp:project}/${repositoryId}/proxy-web-service:latest

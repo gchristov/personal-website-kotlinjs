@@ -1,5 +1,9 @@
-server {  
+server {
   listen 80;
+
+  location /api/contact {
+    proxy_pass ${CONTACT_SERVICE_HOST};
+  }
 
   location / {
     proxy_pass ${LANDING_PAGE_WEB_SERVICE_HOST};
