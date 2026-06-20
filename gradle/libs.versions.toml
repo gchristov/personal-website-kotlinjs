@@ -36,6 +36,8 @@ common-kotlin = { group = "com.gchristov.personal.common", name = "kotlin" }
 common-monitoring = { group = "com.gchristov.personal.common", name = "monitoring" }
 common-network = { group = "com.gchristov.personal.common", name = "network" }
 common-slack = { group = "com.gchristov.personal.common", name = "slack" }
+#noinspection UnusedVersionCatalogEntry
+common-test = { group = "com.gchristov.personal.common", name = "test" }
 
 [plugins]
 

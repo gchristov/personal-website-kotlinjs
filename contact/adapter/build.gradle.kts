@@ -11,5 +11,10 @@ kotlin {
                 implementation(projects.domain)
             }
         }
+        val commonTest by getting {
+            dependencies {
+                implementation(libs.common.test)
+            }
+        }
     }
 }
