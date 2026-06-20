@@ -6,7 +6,21 @@ import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.api.file.Directory
 import org.gradle.kotlin.dsl.getByType
 
+import java.io.FileInputStream
+import java.util.*
+
 internal val Project.libs
     get(): VersionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
 fun Project.binaryRootDirectory(): Directory = layout.buildDirectory.dir("dist/js").get()
+
+fun Project.envSecret(key: String): String {
+    val propFile = file("./secrets.properties")
+    val properties = Properties()
+    properties.load(FileInputStream(propFile))
+    val property = properties.getProperty(key)
+    if (property.isNullOrBlank()) {
+        throw IllegalStateException("Required property is missing: property=$key")
+    }
+    return property
+}
