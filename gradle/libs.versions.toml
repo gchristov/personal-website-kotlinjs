@@ -2,12 +2,8 @@
 buildKonfig = "0.15.0"
 kotlin = "1.9.21"
 kotlinx-coroutines = "1.7.3"
-kotlinx-datetime = "0.4.1"
 kotlinx-serialization = "1.6.1"
 arrow = "1.2.3"
-uuid = "0.8.2"
-diglolCrypto = "0.1.5"
-diglolEncoding = "0.3.0"
 kodein = "7.21.2"
 touchlab-kermit = "2.0.3"
 ktor = "2.3.9"
@@ -19,12 +15,8 @@ kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 #noinspection UnusedVersionCatalogEntry
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
-uuid = { module = "com.benasher44:uuid", version.ref = "uuid" }
-diglol-crypto = { module = "com.diglol.crypto:mac", version.ref = "diglolCrypto" }
-diglol-encoding = { module = "com.diglol.encoding:encoding", version.ref = "diglolEncoding" }
 kodein = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
 touchlab-kermit = { module = "co.touchlab:kermit", version.ref = "touchlab-kermit" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
