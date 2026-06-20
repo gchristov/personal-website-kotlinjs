@@ -10,21 +10,6 @@ function injectEmail() {
   document.getElementById("contact_header").text = email;
   document.getElementById("contact_footer").href = mailTo;
   document.getElementById("contact_footer").text = email;
-  // injectSkype();
-  injectEmailJS();
-}
-
-function injectSkype() {
-  var skype = "stevefransis";
-  var skypeTo = "skype:" + skype;
-  document.getElementById("contact_skype").href = skypeTo;
-  document.getElementById("contact_skype").text = skype;
-}
-
-function injectEmailJS() {
-  var part1 = "user_6y8bLaIug";
-  var part2 = "Pk7189CKrLwh";
-  emailjs.init(part1 + part2);
 }
 
 // Form validation
@@ -66,19 +51,21 @@ function submitForm(e, formName) {
   if (botTest !== "") {
     return;
   }
-  var formData = {
-    from_name: name,
-    from_email: email,
-    from_message: message
-  };
 
   disableSendButton();
-  emailjs.send("gmail", "simple_template", formData).then(
+  fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name: name, email: email, message: message })
+  }).then(
     function(response) {
-      console.log("success");
       enableSendButton();
-      clearForm();
-      alert("Thanks. Your message has been sent successfully!");
+      if (response.ok) {
+        clearForm();
+        alert("Thanks. Your message has been sent successfully!");
+      } else {
+        alert("Could not send message at this time. Please try again.");
+      }
     },
     function(error) {
       console.log("error", error);
