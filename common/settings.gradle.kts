@@ -32,6 +32,6 @@ rootProject.name = "common"
 include("kotlin")
 include("network")
 include("network-testfixtures")
-include("slack")
 include("monitoring")
+include("slack")
 include("test")
