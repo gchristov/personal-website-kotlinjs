@@ -8,14 +8,13 @@ import com.gchristov.personal.common.kotlin.ParameterMap
 import com.gchristov.personal.common.test.FakeCoroutineDispatcher
 import com.gchristov.personal.common.test.FakeLogger
 import com.gchristov.personal.contact.domain.usecase.PostContactUseCase
-import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.DeserializationStrategy
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class PostContactHttpHandlerTest {
     @Test
-    fun validBodyCallsUseCaseWithCorrectArgs() = runTest {
+    fun validBodyCallsUseCaseWithCorrectArgs() {
         val useCase = FakePostContactUseCase()
         val handler = PostContactHttpHandler(
             dispatcher = FakeCoroutineDispatcher,
@@ -24,11 +23,11 @@ class PostContactHttpHandlerTest {
             postContactUseCase = useCase,
         )
         val request = FakeHttpRequest(
-            body = """{"name":"Alice","email":"alice@example.com","message":"Hello!"}"""
+            rawBody = """{"name":"Alice","email":"alice@example.com","message":"Hello!"}"""
         )
         val response = FakeHttpResponse()
 
-        handler.handleHttpRequestAsync(request, response)
+        handler.handleHttpRequest(request, response)
 
         assertEquals(expected = "Alice", actual = useCase.capturedName)
         assertEquals(expected = "alice@example.com", actual = useCase.capturedEmail)
@@ -37,7 +36,7 @@ class PostContactHttpHandlerTest {
     }
 
     @Test
-    fun useCaseErrorReturnsErrorResponse() = runTest {
+    fun useCaseErrorReturnsErrorResponse() {
         val useCase = FakePostContactUseCase(response = Either.Left(Throwable("Slack unreachable")))
         val handler = PostContactHttpHandler(
             dispatcher = FakeCoroutineDispatcher,
@@ -46,11 +45,11 @@ class PostContactHttpHandlerTest {
             postContactUseCase = useCase,
         )
         val request = FakeHttpRequest(
-            body = """{"name":"Alice","email":"alice@example.com","message":"Hello!"}"""
+            rawBody = """{"name":"Alice","email":"alice@example.com","message":"Hello!"}"""
         )
         val response = FakeHttpResponse()
 
-        handler.handleHttpRequestAsync(request, response)
+        handler.handleHttpRequest(request, response)
 
         assertEquals(expected = 400, actual = response.lastStatus)
     }
@@ -75,7 +74,7 @@ private class FakePostContactUseCase(
     }
 }
 
-private class FakeHttpRequest(private val body: String) : HttpRequest {
+private class FakeHttpRequest(private val rawBody: String) : HttpRequest {
     override val baseURL = ""
     override val hostname = ""
     override val ip = ""
@@ -89,14 +88,14 @@ private class FakeHttpRequest(private val body: String) : HttpRequest {
     override val query = object : ParameterMap {
         override fun <T> get(key: String): T? = null
     }
-    override val bodyString = body
-    override val body: Any = body
+    override val bodyString = rawBody
+    override val body: Any = rawBody
 
     override fun <T> decodeBodyFromJson(
         jsonSerializer: JsonSerializer,
         strategy: DeserializationStrategy<T>,
     ): Either<Throwable, T?> = try {
-        Either.Right(jsonSerializer.json.decodeFromString(strategy, body))
+        Either.Right(jsonSerializer.json.decodeFromString(strategy, rawBody))
     } catch (error: Throwable) {
         Either.Left(error)
     }
@@ -104,16 +103,10 @@ private class FakeHttpRequest(private val body: String) : HttpRequest {
 
 private class FakeHttpResponse : HttpResponse {
     var lastStatus: Int? = null
-    private var lastData: String? = null
-    private var lastHeader: String? = null
-    private var lastHeaderValue: String? = null
 
-    override fun send(string: String) { lastData = string }
+    override fun send(string: String) {}
     override fun sendFile(localPath: String) {}
-    override fun setHeader(header: String, value: String) {
-        lastHeader = header
-        lastHeaderValue = value
-    }
+    override fun setHeader(header: String, value: String) {}
     override fun redirect(path: String) {}
     override fun status(status: Int) { lastStatus = status }
 }
