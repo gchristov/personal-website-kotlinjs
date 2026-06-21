@@ -57,6 +57,8 @@ jobs:
         with:
           command: preview
           service: ${{ matrix.service }}
+          infra-dir: infra
+          stack-name: prod
           access-token: ${{ secrets.PULUMI_ACCESS_TOKEN }}
       - name: Artifacts
         uses: actions/upload-artifact@v4
