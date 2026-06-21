@@ -35,11 +35,14 @@ class PostContactHttpHandler(
             strategy = ApiContact.serializer(),
         )
         .flatMap { body ->
-            requireNotNull(body) { "Request body is required" }
+            val contact = requireNotNull(body) { "Request body is required" }
+            require(contact.name.isNotBlank() && contact.email.isNotBlank() && contact.message.isNotBlank()) {
+                "All fields are required"
+            }
             postContactUseCase(
-                name = body.name,
-                email = body.email,
-                message = body.message,
+                name = contact.name,
+                email = contact.email,
+                message = contact.message,
             )
         }
         .flatMap {

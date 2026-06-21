@@ -20,7 +20,7 @@ object ContactDomainModule : DiModule() {
             bindSingleton {
                 provideContactConfig()
             }
-            bindProvider {
+            bindSingleton {
                 providePostContactUseCase(
                     log = instance(),
                     slackSender = instance(),

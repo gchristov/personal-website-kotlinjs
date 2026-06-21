@@ -46,6 +46,18 @@ class PostContactHttpHandlerTest {
     }
 
     @Test
+    fun handleRequestBlankFieldsResponds(): TestResult = runBlockingTest { handler, _, response ->
+        handler.handleHttpRequest(FakeContactHttpRequest(fakeName = ""), response)
+        response.assertEquals(
+            header = "Content-Type",
+            headerValue = ContentType.Application.Json.toString(),
+            data = """{"errorMessage":"All fields are required"}""",
+            status = 400,
+            filePath = null,
+        )
+    }
+
+    @Test
     fun handleRequestErrorResponds(): TestResult = runBlockingTest(
         invocationResult = Either.Left(Throwable("Slack unreachable"))
     ) { handler, _, response ->
