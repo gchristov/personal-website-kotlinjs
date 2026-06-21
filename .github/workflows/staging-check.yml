@@ -6,6 +6,9 @@ on:
 
 env:
   GCP_SA_KEY_INFRA: ${{ secrets.GCP_SA_KEY_INFRA }}
+  MONITORING_SLACK_URL: ${{ secrets.MONITORING_SLACK_URL }}
+  CONTACT_SLACK_WEBHOOK_URL: ${{ secrets.CONTACT_SLACK_WEBHOOK_URL }}
+  PULUMI_VERSION: "3.136.1"
 
 jobs:
   detect-changed-services:
