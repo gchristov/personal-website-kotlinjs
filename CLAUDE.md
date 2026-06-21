@@ -14,6 +14,8 @@ This project is a child of [thecodinglove-kotlinjs](../thecodinglove-kotlinjs) (
 - Use `statistics/` in the parent as the reference for a minimal backend service (one HTTP endpoint, no Firestore/PubSub)
 - The parent's `common/` modules are the authoritative source for shared utilities; changes ported here should have the package renamed from `com.gchristov.thecodinglove` → `com.gchristov.personal` and unused dependencies (Firebase, PubSub, Slack signing) dropped
 
+**Cross-project sync prompt:** whenever you make a change that touches foundational or shared code — CI workflows, Gradle plugins, `common/` modules, infra templates, test patterns, tooling scripts — ask the user: *"Should this change also be applied to the parent project (thecodinglove-kotlinjs)?"* Do the same in reverse when working in the parent: ask if the change should come back here.
+
 ## Project layout
 
 ```
