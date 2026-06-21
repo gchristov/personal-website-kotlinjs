@@ -53,7 +53,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always() # Ensure all artifacts are collected, even after errors
         with:
-          name: Build (${{ matrix.service }})
+          name: Deploy (${{ matrix.service }})
           path: |
             **/build
             ${{ matrix.service }}/infra
