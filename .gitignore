@@ -56,3 +56,4 @@ node_modules/
 .idea
 
 credentials-gcp-infra.json
+secrets.properties

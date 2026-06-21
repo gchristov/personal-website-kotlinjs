@@ -15,6 +15,24 @@ abstract class BaseMultiplatformPlugin : Plugin<Project> {
     }
 }
 
+class BaseNodePlugin : BaseMultiplatformPlugin() {
+    @OptIn(ExperimentalDistributionDsl::class)
+    override fun apply(target: Project) {
+        super.apply(target)
+        target.run {
+            extensions.configure(KotlinMultiplatformExtension::class.java) {
+                js(IR) {
+                    nodejs {
+                        distribution {
+                            outputDirectory = file("${binaryRootDirectory()}/productionExecutable")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 class BaseBrowserPlugin : BaseMultiplatformPlugin() {
     @OptIn(ExperimentalDistributionDsl::class)
     override fun apply(target: Project) {

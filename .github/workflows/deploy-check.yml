@@ -6,6 +6,8 @@ on:
 
 env:
   GCP_SA_KEY_INFRA: ${{ secrets.GCP_SA_KEY_INFRA }}
+  MONITORING_SLACK_URL: ${{ secrets.MONITORING_SLACK_URL }}
+  CONTACT_SLACK_WEBHOOK_URL: ${{ secrets.CONTACT_SLACK_WEBHOOK_URL }}
 
 jobs:
   detect-changed-services:
@@ -46,12 +48,14 @@ jobs:
         with:
           command: up
           service: ${{ matrix.service }}
+          infra-dir: infra
+          stack-name: prod
           access-token: ${{ secrets.PULUMI_ACCESS_TOKEN }}
       - name: Artifacts
         uses: actions/upload-artifact@v4
         if: always() # Ensure all artifacts are collected, even after errors
         with:
-          name: Build (${{ matrix.service }})
+          name: Deploy (${{ matrix.service }})
           path: |
             **/build
             ${{ matrix.service }}/infra

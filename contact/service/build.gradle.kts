@@ -1,0 +1,18 @@
+plugins {
+    alias(libs.plugins.personal.website.node.binary)
+}
+
+kotlin {
+    sourceSets {
+        val commonMain by getting {
+            dependencies {
+                implementation(libs.common.kotlin)
+                implementation(libs.common.monitoring)
+                implementation(libs.common.slack)
+                implementation(libs.common.network)
+                implementation(projects.domain)
+                implementation(projects.adapter)
+            }
+        }
+    }
+}

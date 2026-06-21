@@ -1,10 +1,45 @@
 [versions]
+buildKonfig = "0.15.0"
 kotlin = "1.9.21"
+kotlinx-coroutines = "1.7.3"
+kotlinx-serialization = "1.6.1"
+arrow = "1.2.3"
+kodein = "7.21.2"
+touchlab-kermit = "2.0.3"
+ktor = "2.3.9"
+logback = "1.4.11"
+npm-express = "4.18.2"
 
 [libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+#noinspection UnusedVersionCatalogEntry
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+kodein = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
+touchlab-kermit = { module = "co.touchlab:kermit", version.ref = "touchlab-kermit" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-contentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-serializationJson = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+npm-express = { group = "npm", name = "express", version.ref = "npm-express" }
 
 # Plugin dependencies included in the pre-compiled gradle-plugins/conventions project
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-serialization-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+buildKonfig-gradlePlugin = { module = "com.codingfeline.buildkonfig:buildkonfig-gradle-plugin", version.ref = "buildKonfig" }
+
+# Dependency notations for internal common libraries
+common-kotlin = { group = "com.gchristov.personal.common", name = "kotlin" }
+common-monitoring = { group = "com.gchristov.personal.common", name = "monitoring" }
+common-network = { group = "com.gchristov.personal.common", name = "network" }
+#noinspection UnusedVersionCatalogEntry
+common-network-testFixtures = { group = "com.gchristov.personal.common", name = "network-testfixtures" }
+common-slack = { group = "com.gchristov.personal.common", name = "slack" }
+#noinspection UnusedVersionCatalogEntry
+common-test = { group = "com.gchristov.personal.common", name = "test" }
 
 [plugins]
 
@@ -12,3 +47,8 @@ kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ve
 #noinspection UnusedVersionCatalogEntry
 personal-website-base-browser = { id = "base-browser-plugin", version = "unspecified" }
 personal-website-browser-binary = { id = "browser-binary-plugin", version = "unspecified" }
+#noinspection UnusedVersionCatalogEntry
+personal-website-base-node = { id = "base-node-plugin", version = "unspecified" }
+personal-website-node-module = { id = "node-module-plugin", version = "unspecified" }
+personal-website-build-config = { id = "build-config-plugin", version = "unspecified" }
+personal-website-node-binary = { id = "node-binary-plugin", version = "unspecified" }
