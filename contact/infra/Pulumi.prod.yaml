@@ -1,3 +1,3 @@
 config:
-  gcp:project: personal-website-416108
   gcp:credentials: credentials-gcp-infra.json
+  gcp:project: personal-website-416108
