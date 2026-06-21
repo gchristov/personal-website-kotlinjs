@@ -35,6 +35,8 @@ buildKonfig-gradlePlugin = { module = "com.codingfeline.buildkonfig:buildkonfig-
 common-kotlin = { group = "com.gchristov.personal.common", name = "kotlin" }
 common-monitoring = { group = "com.gchristov.personal.common", name = "monitoring" }
 common-network = { group = "com.gchristov.personal.common", name = "network" }
+#noinspection UnusedVersionCatalogEntry
+common-network-testFixtures = { group = "com.gchristov.personal.common", name = "network-testfixtures" }
 common-slack = { group = "com.gchristov.personal.common", name = "slack" }
 #noinspection UnusedVersionCatalogEntry
 common-test = { group = "com.gchristov.personal.common", name = "test" }
