@@ -2,6 +2,18 @@
 
 Kotlin Multiplatform project powering gchristov.com. KotlinJS/IR transpiles to Node.js (backend services) and browser (frontend); services run as Docker containers on Google Cloud Run.
 
+## Relationship to parent project
+
+This project is a child of [thecodinglove-kotlinjs](../thecodinglove-kotlinjs) (`/Users/georgi/Documents/Workspace/thecodinglove-kotlinjs`). The two projects share the same foundational architecture and should be kept in sync at the infrastructure and tooling level. The only intentional differences are the features each project actually delivers.
+
+**The rule:** any high-level architecture change applied to the parent — new Gradle plugin conventions, changes to the common module structure, CI workflow improvements, Pulumi patterns, Docker/nginx setup, test patterns — should be evaluated and ported here, tailored to the scope of this project. Foundational code (plugin implementations, `common/` modules, DI wiring patterns, handler/use-case structure, infra templates) should remain near-identical between the two projects. The diff between them should read as "different features, same foundations."
+
+**When working on this project:**
+- If something feels boilerplate or structural, check how the parent does it first
+- If the parent has a newer/cleaner pattern for the same thing, align before diverging
+- Use `statistics/` in the parent as the reference for a minimal backend service (one HTTP endpoint, no Firestore/PubSub)
+- The parent's `common/` modules are the authoritative source for shared utilities; changes ported here should have the package renamed from `com.gchristov.thecodinglove` → `com.gchristov.personal` and unused dependencies (Firebase, PubSub, Slack signing) dropped
+
 ## Project layout
 
 ```
